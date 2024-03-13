@@ -6,6 +6,7 @@ import clientConfig from "./config/client-config";
 import { Page } from "@/types/Page";
 
 export async function getProjects(): Promise<Project[]>{
+    const revalidate = 30
     return createClient(clientConfig).fetch(
         groq`*[_type == "project"]{
             _id,
@@ -15,12 +16,14 @@ export async function getProjects(): Promise<Project[]>{
             "image": image.asset->url,
             url,
             content
-        }`
+        }`,
+        {},
+     { next: {revalidate:revalidate}}
     ) 
 }
 
 export async function getPages(): Promise<Page[]> {
-    const revalidate = 60
+    const revalidate = 30
     return createClient(clientConfig).fetch(
       groq`*[_type == "page"]{
         _id,
@@ -29,9 +32,9 @@ export async function getPages(): Promise<Page[]> {
         "slug": slug.current
       }`,{},
      { next: {revalidate:revalidate}})
-  }
+}
   
-  export async function getPage(slug: string): Promise<Page> {
+export async function getPage(slug: string): Promise<Page> {
     
     return createClient(clientConfig).fetch(
       groq`*[_type == "page" && slug.current == $slug][0]{
@@ -43,4 +46,4 @@ export async function getPages(): Promise<Page[]> {
       }`,
       { slug }
     )
-  }
+}
