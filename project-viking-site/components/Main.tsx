@@ -30,27 +30,28 @@ const Main: React.FC = () => {
       </div> 
       <section className="text-gray-600 body-font">
         <div className="container px-5 mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="sm:text-5xl font-medium title-font text-white mb-4">
+          <div className="text-center mb-10 mt-20">
+            <h1 className="sm:text-5xl font-medium title-font text-white mb-4">
               Contact Us
-            </h2>
+            </h1>
             {/* <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">
               Here is our company
             </p> */}
             <div className="flex mt-6 justify-center">
               <div className="w-16 h-1 rounded-full bg-white inline-flex"></div>
-            </div>      
+            </div>       
+
           </div>
         </div>
       </section>
       <section className="text-gray-600 body-font">
-      <div className="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
-            <div className="flex flex-col mb-5 lg:items-start items-center">
+      {/* <div className="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center"> */}
+            <div className="flex flex-col mb-5  items-center">
               <div className="flex-grow">
                 <h3 className="text-white text-2xl title-font font-medium mb-3">
-                  Phone:
+                  {/* Phone: */}
                   <a className="ml-3 text-white leading-relaxed text-lg" href="tel:5304872305">
-               
+    
                   (530)487-2305
               
                 </a>
@@ -58,30 +59,28 @@ const Main: React.FC = () => {
                 
               </div>
             </div>
-            <div className="flex flex-col mb-5 lg:items-start items-center">
+            <div className="flex flex-col mb-5  items-center">
               <div className="flex-grow">
                 <h3 className="text-white text-2xl title-font font-medium mb-3">
-                  Instagram:
+                  {/* Instagram: */}
                   <a className="ml-3 leading-relaxed text-white text-lg" href="https://www.instagram.com/viking_project_fitness">
-                  
                     @viking_project_fitness
-                
                 </a>
                 </h3>
                
               </div>
             </div>
-            <div className="flex flex-col mb-5 lg:items-start items-center">
+            <div className="flex flex-col mb-5  items-center">
               <div className="flex-grow">
                 <h2 className="text-white text-2xl title-font font-medium mb-3">
-                  Email: 
+                  {/* Email:  */}
                   <a className="ml-3 leading-relaxed text-white text-lg" href="mailto:vikingprojectfit@gmail.com">
                   vikingprojectfit@gmail.com 
                   </a>
                 </h2>
               </div>
             </div>
-      </div>
+      {/* </div> */}
       </section>
     </section>
   );
