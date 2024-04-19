@@ -71,16 +71,16 @@ const Main: React.FC = () => {
                
               </div>
             </div>
-            {/* <div className="flex flex-col mb-5 lg:items-start items-center">
+            <div className="flex flex-col mb-5 lg:items-start items-center">
               <div className="flex-grow">
                 <h2 className="text-white text-2xl title-font font-medium mb-3">
-                  Email
+                  Email: 
+                  <a className="ml-3 leading-relaxed text-white text-lg" href="mailto:vikingprojectfit@gmail.com">
+                  vikingprojectfit@gmail.com 
+                  </a>
                 </h2>
-                <p className="leading-relaxed text-lg">
-                  Sample email
-                </p>
               </div>
-            </div> */}
+            </div>
       </div>
       </section>
     </section>
